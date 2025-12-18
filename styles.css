@@ -166,8 +166,8 @@ body {
 /* Rewards Grid */
 .rewards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 /* Day Card Base */
@@ -443,190 +443,132 @@ body {
     50% { opacity: 1; transform: scale(1.2); }
 }
 
-/* Special Cards (Day 7 & 14) */
-.day-card.special {
-    background: linear-gradient(180deg, #e8922e 0%, #d97706 30%, #c56a05 60%, #a85a04 100%);
-    border-color: #f5a623;
-    min-height: 80px;
+/* Mega Bonus Card (Day 7) */
+.day-card.mega-bonus {
+    grid-column: span 3;
+    background: linear-gradient(180deg, #ffd700 0%, #ffb800 20%, #ff9500 50%, #e67300 80%, #cc5500 100%);
+    border: 3px solid #ffdd44;
+    min-height: 100px;
+    box-shadow:
+        0 0 20px rgba(255, 200, 0, 0.5),
+        0 0 40px rgba(255, 150, 0, 0.3),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    animation: megaGlow 2s ease-in-out infinite;
 }
 
-.day-card.special::before {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, transparent 100%);
+@keyframes megaGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 20px rgba(255, 200, 0, 0.5),
+            0 0 40px rgba(255, 150, 0, 0.3),
+            inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        box-shadow:
+            0 0 30px rgba(255, 200, 0, 0.7),
+            0 0 60px rgba(255, 150, 0, 0.5),
+            inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    }
 }
 
-.day-card.special .card-content {
-    flex-direction: column;
-    padding-top: 2px;
+.day-card.mega-bonus::before {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, transparent 100%);
 }
 
-.day-label.special-label {
-    font-size: 9px;
-    color: #ffffff;
-    margin-bottom: 2px;
-}
-
-.skin-name {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 7px;
+.day-label.mega-label {
+    font-size: 14px;
     font-weight: 700;
     color: #ffffff;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(180deg, #34d058 0%, #28a745 100%);
-    padding: 2px 5px;
-    border-radius: 3px;
-    margin-top: 3px;
-    letter-spacing: 0.3px;
-    border: 1px solid #22863a;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Dunk Character */
-.skin-character.dunk {
+.mega-reward {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
-.dunk-body {
-    width: 34px;
-    height: 30px;
-    background: linear-gradient(180deg, #c97842 0%, #a85d32 50%, #8b4a28 100%);
-    border-radius: 6px 6px 10px 10px;
+.mega-star {
+    font-size: 40px;
+    color: #ffffff;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 200, 0, 0.6),
+        2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: starPulse 1s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.mega-coins {
     position: relative;
-    border: 2px solid #7a4020;
-    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.2);
+    width: 70px;
+    height: 50px;
 }
 
-.dunk-eye {
+.mega-coins .coin {
+    width: 32px;
+    height: 32px;
+}
+
+.mega-coins .coin.c1 {
+    top: 0;
+    left: 0;
+}
+
+.mega-coins .coin.c2 {
+    top: 5px;
+    left: 20px;
+}
+
+.mega-coins .coin.c3 {
+    top: 10px;
+    left: 40px;
+}
+
+.mega-text {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #e63946 0%, #c41e3a 100%);
+    padding: 4px 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    border: 2px solid #ff4d5a;
+}
+
+.mega-sparkles {
     position: absolute;
-    width: 16px;
-    height: 12px;
-    background: linear-gradient(180deg, #4a90d9 0%, #2e6db4 100%);
-    border-radius: 3px;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid #1e4a7a;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
 }
 
-.dunk-eye::before {
-    content: '';
+.mega-sparkle {
     position: absolute;
-    width: 6px;
-    height: 6px;
-    background: #1a1a2e;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 12px;
+    animation: megaSparkle 1.2s ease-in-out infinite;
+    text-shadow: 0 0 8px #ffd700;
 }
 
-.dunk-eye::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #ffffff;
-    border-radius: 50%;
-    top: 2px;
-    left: 3px;
-}
+.mega-sparkle.ms1 { top: 10px; left: 15%; animation-delay: 0s; }
+.mega-sparkle.ms2 { top: 15px; right: 15%; animation-delay: 0.3s; }
+.mega-sparkle.ms3 { bottom: 25px; left: 20%; animation-delay: 0.6s; }
+.mega-sparkle.ms4 { bottom: 20px; right: 20%; animation-delay: 0.9s; }
 
-.dunk-antenna {
-    position: absolute;
-    width: 3px;
-    height: 8px;
-    background: linear-gradient(180deg, #c97842 0%, #a85d32 100%);
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-}
-
-.dunk-antenna::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: linear-gradient(180deg, #ffc107 0%, #e6a800 100%);
-    border-radius: 50%;
-    top: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid #c79100;
-    box-shadow: 0 0 6px rgba(255, 193, 7, 0.6);
-}
-
-/* Shein Character (Cat/Fish) */
-.skin-character.shein {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.shein-body {
-    width: 40px;
-    height: 22px;
-    background: linear-gradient(180deg, #4dd6e8 0%, #2db8ca 50%, #1a9aab 100%);
-    border-radius: 12px 20px 8px 12px;
-    position: relative;
-    border: 2px solid #148a9a;
-    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3);
-}
-
-.shein-eye {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    background: linear-gradient(180deg, #ffffff 0%, #e8e8e8 100%);
-    border-radius: 50%;
-    top: 3px;
-    left: 6px;
-    border: 2px solid #148a9a;
-}
-
-.shein-eye::after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    background: #1a1a2e;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-}
-
-.shein-fin {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 10px solid #4dd6e8;
-    top: -8px;
-    left: 12px;
-}
-
-.shein-fin::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-bottom: 8px solid #4dd6e8;
-    top: 3px;
-    left: 8px;
-}
-
-.shein-tail {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: linear-gradient(135deg, #4dd6e8 0%, #2db8ca 100%);
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-    border-radius: 0 4px 0 4px;
+@keyframes megaSparkle {
+    0%, 100% { opacity: 0.4; transform: scale(0.8) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.3) rotate(180deg); }
 }
 
 /* Claim Button */
@@ -693,12 +635,30 @@ body {
     }
 
     .day-card {
-        min-height: 75px;
+        min-height: 85px;
         padding: 5px 3px 6px 3px;
     }
 
+    .day-card.mega-bonus {
+        min-height: 90px;
+    }
+
     .day-label {
-        font-size: 8px;
+        font-size: 9px;
+    }
+
+    .mega-star {
+        font-size: 30px;
+    }
+
+    .mega-coins .coin {
+        width: 26px;
+        height: 26px;
+    }
+
+    .mega-text {
+        font-size: 10px;
+        padding: 3px 8px;
     }
 
     .banner-text {
