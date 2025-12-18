@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Streak - Daily Rewards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay">
+        <div class="modal">
+            <!-- Close Button -->
+            <button class="close-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                    <line x1="6" y1="18" x2="18" y2="6"></line>
+                </svg>
+            </button>
+
+            <!-- Header Banner -->
+            <div class="header-banner">
+                <div class="banner-left"></div>
+                <div class="banner-center">
+                    <span class="banner-text">DAY STREAK</span>
+                </div>
+                <div class="banner-right"></div>
+            </div>
+
+            <!-- Rewards Grid -->
+            <div class="rewards-container">
+                <div class="rewards-grid">
+                    <!-- Day 1 - Completed -->
+                    <div class="day-card completed">
+                        <div class="day-label">DAY 1</div>
+                        <div class="card-content">
+                            <div class="stamp-overlay">
+                                <div class="stamp">
+                                    <div class="stamp-inner">
+                                        <span class="stamp-text-top">DAILY</span>
+                                        <span class="stamp-text-main">CLEAR</span>
+                                        <span class="stamp-text-bottom">REWARD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reward-count completed-count">1</div>
+                    </div>
+
+                    <!-- Day 2 - Current -->
+                    <div class="day-card current">
+                        <div class="day-label">DAY 2</div>
+                        <div class="card-content">
+                            <div class="lightning-icon green">
+                                <svg viewBox="0 0 40 60" class="bolt">
+                                    <polygon points="25,0 8,28 20,28 15,60 35,25 22,25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="reward-count">1</div>
+                        <div class="sparkles">
+                            <div class="sparkle s1">✦</div>
+                            <div class="sparkle s2">✦</div>
+                            <div class="sparkle s3">✦</div>
+                            <div class="sparkle s4">✦</div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 3</div>
+                        <div class="card-content">
+                            <div class="coins-icon double">
+                                <div class="coin c1"></div>
+                                <div class="coin c2"></div>
+                            </div>
+                        </div>
+                        <div class="reward-count">3</div>
+                    </div>
+
+                    <!-- Day 4 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 4</div>
+                        <div class="card-content">
+                            <div class="lightning-icon yellow">
+                                <svg viewBox="0 0 40 60" class="bolt">
+                                    <polygon points="25,0 8,28 20,28 15,60 35,25 22,25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 5 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 5</div>
+                        <div class="card-content">
+                            <div class="coins-icon single">
+                                <div class="coin"></div>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 6 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 6</div>
+                        <div class="card-content">
+                            <div class="lightning-icon yellow">
+                                <svg viewBox="0 0 40 60" class="bolt">
+                                    <polygon points="25,0 8,28 20,28 15,60 35,25 22,25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 7 - Special Skin -->
+                    <div class="day-card special">
+                        <div class="day-label special-label">DAY 7</div>
+                        <div class="card-content">
+                            <div class="skin-character dunk">
+                                <div class="dunk-body">
+                                    <div class="dunk-eye"></div>
+                                    <div class="dunk-antenna"></div>
+                                </div>
+                            </div>
+                            <div class="skin-name">DUNK SKIN</div>
+                        </div>
+                    </div>
+
+                    <!-- Day 8 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 8</div>
+                        <div class="card-content">
+                            <div class="coins-icon double">
+                                <div class="coin c1"></div>
+                                <div class="coin c2"></div>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 9 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 9</div>
+                        <div class="card-content">
+                            <div class="coins-icon single">
+                                <div class="coin"></div>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 10 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 10</div>
+                        <div class="card-content">
+                            <div class="lightning-icon yellow">
+                                <svg viewBox="0 0 40 60" class="bolt">
+                                    <polygon points="25,0 8,28 20,28 15,60 35,25 22,25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 11 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 11</div>
+                        <div class="card-content">
+                            <div class="lightning-icon yellow">
+                                <svg viewBox="0 0 40 60" class="bolt">
+                                    <polygon points="25,0 8,28 20,28 15,60 35,25 22,25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 12 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 12</div>
+                        <div class="card-content">
+                            <div class="coins-icon double">
+                                <div class="coin c1"></div>
+                                <div class="coin c2"></div>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 13 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 13</div>
+                        <div class="card-content">
+                            <div class="coins-icon single">
+                                <div class="coin"></div>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 14 - Special Skin -->
+                    <div class="day-card special">
+                        <div class="day-label special-label">DAY 14</div>
+                        <div class="card-content">
+                            <div class="skin-character shein">
+                                <div class="shein-body">
+                                    <div class="shein-eye"></div>
+                                    <div class="shein-fin"></div>
+                                    <div class="shein-tail"></div>
+                                </div>
+                            </div>
+                            <div class="skin-name">SHEIN SKIN</div>
+                        </div>
+                    </div>
+
+                    <!-- Day 15 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 15</div>
+                        <div class="card-content">
+                            <div class="lightning-icon yellow">
+                                <svg viewBox="0 0 40 60" class="bolt">
+                                    <polygon points="25,0 8,28 20,28 15,60 35,25 22,25"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+
+                    <!-- Day 16 -->
+                    <div class="day-card">
+                        <div class="day-label">DAY 16</div>
+                        <div class="card-content">
+                            <div class="coins-icon double">
+                                <div class="coin c1"></div>
+                                <div class="coin c2"></div>
+                            </div>
+                        </div>
+                        <div class="reward-count">2</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Claim Button -->
+            <button class="claim-btn">Claim</button>
+        </div>
+    </div>
+</body>
+</html>
