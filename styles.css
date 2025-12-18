@@ -72,7 +72,7 @@ body {
 /* Header Banner */
 .header-banner {
     position: absolute;
-    top: -5px;
+    top: -10px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -81,55 +81,67 @@ body {
 }
 
 .banner-center {
-    background: linear-gradient(180deg, #dc2f5a 0%, #c41e4a 30%, #a8153d 70%, #8a1030 100%);
-    padding: 10px 20px 22px 20px;
+    background: linear-gradient(180deg, #e84466 0%, #d63157 20%, #c41e4a 50%, #a8153d 80%, #8a1030 100%);
+    padding: 14px 45px 20px 45px;
     position: relative;
     clip-path: polygon(
-        5% 0%,
-        95% 0%,
-        100% 15%,
-        100% 70%,
-        82% 100%,
-        50% 75%,
-        18% 100%,
-        0% 70%,
-        0% 15%
+        0% 20%,
+        4% 0%,
+        96% 0%,
+        100% 20%,
+        100% 65%,
+        85% 85%,
+        50% 100%,
+        15% 85%,
+        0% 65%
     );
-    min-width: 220px;
+    min-width: 260px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .banner-center::before {
     content: '';
     position: absolute;
-    top: 3px;
-    left: 10px;
-    right: 10px;
-    height: 12px;
-    background: linear-gradient(180deg, rgba(255, 120, 150, 0.5) 0%, transparent 100%);
-    border-radius: 3px;
+    top: 4px;
+    left: 20px;
+    right: 20px;
+    height: 15px;
+    background: linear-gradient(180deg, rgba(255, 150, 180, 0.4) 0%, transparent 100%);
+    border-radius: 2px;
+}
+
+.banner-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
 }
 
 .banner-text {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 30px;
+    font-size: 32px;
     color: #ffffff;
     text-shadow:
-        3px 3px 0 #2a1a1a,
-        -1px -1px 0 #2a1a1a,
-        1px -1px 0 #2a1a1a,
-        -1px 1px 0 #2a1a1a,
-        4px 4px 8px rgba(0, 0, 0, 0.6);
-    letter-spacing: 3px;
+        2px 2px 0 #1a0a0a,
+        -1px -1px 0 #1a0a0a,
+        1px -1px 0 #1a0a0a,
+        -1px 1px 0 #1a0a0a,
+        3px 3px 6px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    white-space: nowrap;
+    display: block;
 }
 
 .banner-left,
 .banner-right {
-    width: 20px;
-    height: 25px;
-    background: linear-gradient(180deg, #6b1525 0%, #4a0d18 100%);
-    margin-top: 18px;
+    width: 18px;
+    height: 22px;
+    background: linear-gradient(180deg, #5a1020 0%, #3a0810 100%);
+    margin-top: 12px;
+    flex-shrink: 0;
 }
 
 .banner-left {
